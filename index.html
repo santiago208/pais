@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>prompt</title>
+    <link rel="stylesheet" href="./bulma-0.7.4/css/bulma.min.css">
+    <script>
+        var name = prompt('Queremos conocerte. ¿como te llamas?');
+        var paises = [
+            'Colombia',
+            'Ecuador',
+            'Perú',
+            'Lima',
+            'China',
+            'Brasil',
+            'España',
+            'Inglaterra'
+        ];
+    </script>
+</head>
+
+<body>
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <div class="title">
+                    <script type="text/javascript">
+                        document.write('<h1> Es un gusto verte ' + '<i>' + name + '</i>' + '</h1>');
+                    </script>
+                </div>
+                <h2 id="y" class="subtitle">
+                </h2>
+            </div>
+        </div>
+    </section>
+    <div class="columns">
+        <div class="column">
+           
+            <p id="x"  onmouseover="y" class="subtitle"> Te gusta viajar?</p>
+            <script> var y = prompt('Que pais te gusta?');
+                document.getElementById('x').innerHTML=' <p>A mi tambien me gusta este país <em> ' + '"' +  y + '"' + '</p></em>';
+            </script>
+            <h1 class="title has-text-info has-text-centered"> Mejores paises</h1> 
+            <script>
+                document.write('<p> El lugar más bonito es <em> ');
+                document.write(paises[5] + '</em></p>');
+                document.write('<p> El lugar con más poblacion es <em>');
+                document.write(paises[4] + '</em></p>');
+                paises.pop();
+                document.write('<p> El lugar más rico es <em>');
+                document.write(paises [paises.length-1]);
+            </script>
+
+         
+        </div>
+    </div>
+    <script type="text/javascript" src="./javascript.js"></script>
+</body>
+
+</html>
